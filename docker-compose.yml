@@ -1,0 +1,20 @@
+#can learn multiple containers
+
+services:
+  postrgres_service:
+      image: postgres  # image name will be pulled from hub.docker.com
+      ports:
+        - "5432:5432"
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=password
+        - POSTGRES_DB=review
+
+  redis:
+    image: redis  #second container
+    ports:
+      - "6379:6379"  #port mapping
+
+
+
+
